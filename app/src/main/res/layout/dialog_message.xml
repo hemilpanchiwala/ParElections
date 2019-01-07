@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="20dp"
+        app:cardBackgroundColor="#09AFED">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+    <TextView
+        android:id="@+id/declareDates"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="false"
+        android:text="Election Dates have been"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:textColor="#ffffff"/>
+
+    <TextView
+        android:id="@+id/declareDates1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Declared"
+        android:textAllCaps="true"
+        android:textColor="#ffffff"
+        android:layout_gravity="center" />
+
+    <TextView
+        android:id="@+id/tvDates"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DD/MM/YYYY"
+        android:layout_gravity="center"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:textColor="#ffffff"
+        android:textSize="22sp"/>
+
+    <TextView
+        android:id="@+id/tvPolling1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="To find your Polling Booth Station "
+        android:layout_marginTop="5dp"
+        android:textColor="#ffffff"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:id="@+id/tvPolling2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Go to Polling Information \u0026 Results Page"
+        android:layout_gravity="center"
+        android:textColor="#ffffff"/>
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>

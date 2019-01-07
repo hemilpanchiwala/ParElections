@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ElectoralOfficer" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tvID"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Electoral Officer Login"
+    android:textSize="20sp"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="50dp"/>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/designID"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/tvID"
+        android:layout_centerHorizontal="true">
+    <EditText
+        android:id="@+id/etID"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter ID here"
+        android:inputType="numberDecimal"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/designEmail"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/designID"
+        android:layout_centerHorizontal="true">
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:inputType="textEmailAddress"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/designPassword"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/designEmail"
+        android:layout_centerHorizontal="true">
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:inputType="textPassword"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/designPassword"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+    <android.support.v7.widget.AppCompatButton
+        style="@style/RaisedButton"
+        android:background="@drawable/rounded"
+        android:id="@+id/btnSubmit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Submit"
+        android:onClick="onClick"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="5dp"/>
+
+        <android.support.v7.widget.AppCompatButton
+            style="@style/RaisedButton"
+            android:background="@drawable/rounded"
+            android:id="@+id/btnSignUp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="SignUp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"/>
+
+    </LinearLayout>
+
+    </RelativeLayout>
+</ScrollView>

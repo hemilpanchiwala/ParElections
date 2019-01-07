@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginTop="20dp"
+    android:background="@drawable/cardview_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/tvname"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:layout_weight="0.7"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:layout_weight="1.3"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <TextView
+            android:id="@+id/tvaadhar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Aadhar No."
+            android:layout_weight="0.7"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/aadhar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Aadhar"
+            android:layout_weight="1.3"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <TextView
+            android:id="@+id/tvusername"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Username"
+            android:layout_weight="0.7"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Username"
+            android:layout_weight="1.3"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <TextView
+            android:id="@+id/tvdob"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="DOB"
+            android:layout_weight="0.7"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/dob"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="DOB"
+            android:layout_weight="1.3"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <TextView
+            android:id="@+id/tvmobile"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Mobile No."
+            android:layout_weight="0.7"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/mobile"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Mobile"
+            android:layout_weight="1.3"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <TextView
+            android:id="@+id/tvcaddress1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Current Address"
+            android:layout_weight="0.7"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/caddress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Address"
+            android:layout_weight="1.3"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <TextView
+            android:id="@+id/tvpaddress1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Permanent Address"
+            android:layout_weight="0.7"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/paddress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Address"
+            android:layout_weight="1.3"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <TextView
+            android:id="@+id/tvrname"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Relative Name"
+            android:layout_weight="0.7"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/rname"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:layout_weight="1.3"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_marginBottom="10dp">
+
+        <TextView
+            android:id="@+id/tvrelation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Type Of Relation"
+            android:layout_weight="0.7"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/torelation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Relation"
+            android:layout_weight="1.3"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp">
+
+        <Button
+            style="@style/RaisedButton"
+            android:background="@drawable/rounded"
+            android:id="@+id/btnApprove"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:text="Approve"
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            android:gravity="center"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"/>
+
+        <Button
+            style="@style/RaisedButton"
+            android:background="@drawable/rounded"
+            android:id="@+id/btnRemove"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:text="Remove"
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            android:gravity="center"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

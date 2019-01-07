@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "234890803780",
+    "firebase_url": "https://parliament-elections.firebaseio.com",
+    "project_id": "parliament-elections",
+    "storage_bucket": "parliament-elections.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:234890803780:android:0f41997b151e102a",
+        "android_client_info": {
+          "package_name": "com.example.android.parliamentaryelections"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "234890803780-u9uo1p2iuhgoibj5ve6kt9go052lvm1r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCW0oKSAhJX1yr_zPY7WPlzrZN7N67EQQE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

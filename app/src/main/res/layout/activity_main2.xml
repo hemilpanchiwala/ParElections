@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/btnLogout3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:text="LogOut"
+        android:textSize="15sp"/>
+
+    <TextView
+        android:id="@+id/tvNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No User Requests"
+        android:layout_gravity="center"
+        android:textSize="16sp"
+        android:visibility="invisible"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:id="@+id/rview" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2">
+    <android.support.v7.widget.AppCompatButton
+        style="@style/RaisedButton"
+        android:background="@drawable/rounded"
+        android:id="@+id/btnSetResults"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Results"
+        android:layout_weight="1"
+        android:textAllCaps="false"
+        android:layout_marginRight="5dp"/>
+
+        <android.support.v7.widget.AppCompatButton
+            android:background="@drawable/rounded"
+            style="@style/RaisedButton"
+            android:id="@+id/btnSetDates"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:text="Set Election\nDates"
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            android:layout_marginLeft="5dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+    <android.support.v7.widget.AppCompatButton
+        style="@style/RaisedButton"
+        android:background="@drawable/rounded"
+        android:layout_marginRight="5dp"
+        android:id="@+id/btnUpdates"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Updates"
+        android:textAllCaps="false"
+        android:layout_weight="1"
+        android:layout_marginTop="8dp"/>
+
+    <android.support.v7.widget.AppCompatButton
+        style="@style/RaisedButton"
+        android:id="@+id/btnResults"
+        android:background="@drawable/rounded"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Set Result\n Dates"
+        android:textAllCaps="false"
+        android:layout_marginLeft="5dp"
+        android:layout_weight="1"/>
+
+    </LinearLayout>
+
+</LinearLayout>
