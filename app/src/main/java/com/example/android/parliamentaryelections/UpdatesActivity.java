@@ -60,12 +60,14 @@ public class UpdatesActivity extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_updates, container, false);
+        final View view = inflater.inflate(R.layout.fragment_updates, container, false);
 
         tvUpdates = (TextView) view.findViewById(R.id.tvUpdates);
-        Typeface font = Typeface.createFromAsset(getActivity().getAssets(), "fonts/Sansation-Bold.ttf");
+        btnLogOut = (Button) view.findViewById(R.id.btnLogout);
+        final Typeface font = Typeface.createFromAsset(getActivity().getAssets(), "fonts/Sansation-Bold.ttf");
         tvUpdates.setTypeface(font);
 
+        
         recyclerView = (RecyclerView) view.findViewById(R.id.recycler_view);
 
         createNotificationChannel();
@@ -79,6 +81,7 @@ public class UpdatesActivity extends Fragment {
         NotificationManagerCompat notificationManagerCompat = NotificationManagerCompat.from(getActivity());
         notificationManagerCompat.notify(NOTIFICATION_ID, builder.build());
 
+        btnLogOut.setTypeface(font);
         database = FirebaseDatabase.getInstance();
         myRef = database.getReference("message");
 
@@ -108,7 +111,11 @@ public class UpdatesActivity extends Fragment {
                 recyclerView.setLayoutManager(layoutmanager);
                 recyclerView.setItemAnimator(new DefaultItemAnimator());
                 recyclerView.setAdapter(recycler);
-
+                if (recycler.getItemCount() == 0) {
+                    TextView Info = (TextView) view.findViewById(R.id.tvInfo);
+                    Info.setTypeface(font);
+                    Info.setVisibility(View.VISIBLE);
+                }
             }
 
             @Override
