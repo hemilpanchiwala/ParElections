@@ -299,7 +299,7 @@ public class SignUp1 extends AppCompatActivity {
 
                             Toast.makeText(SignUp1.this, "Thanks for signing Up \n Will be able to login once Verified",Toast.LENGTH_LONG).show();
                             startActivity(new Intent(SignUp1.this, MainActivity.class));
-
+                            finish();
                        //     sendEmailVerification();
 
                   /*      } else {
