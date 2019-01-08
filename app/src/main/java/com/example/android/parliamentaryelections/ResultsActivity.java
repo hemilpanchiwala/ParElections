@@ -1,9 +1,13 @@
 package com.example.android.parliamentaryelections;
 
+import android.annotation.TargetApi;
+import android.app.AlarmManager;
+import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
@@ -11,6 +15,7 @@ import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.Html;
+import android.text.format.DateUtils;
 import android.text.method.LinkMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -21,6 +26,8 @@ import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import com.example.android.parliamentaryelections.Main2Activity.*;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -28,9 +35,13 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
-
+import java.util.TimeZone;
 
 
 public class ResultsActivity extends Fragment {
@@ -44,6 +55,9 @@ public class ResultsActivity extends Fragment {
     DatabaseReference myRef, myRef1, myRef2;
     RecyclerView recyclerView;
     List<Listdata2> list;
+    Calendar cal;
+    AlarmManager alarmManager;
+    PendingIntent pendingIntent;
 
     public ResultsActivity() {
         // Required empty public constructor
@@ -55,11 +69,12 @@ public class ResultsActivity extends Fragment {
     }
 
     @Override
-    public View onCreateView(final LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(final LayoutInflater inflater, final ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
 
         View view = inflater.inflate(R.layout.fragment_results, container, false);
+
 
         Typeface font = Typeface.createFromAsset(getActivity().getAssets(), "fonts/Sansation-Bold.ttf");
         Typeface font1 = Typeface.createFromAsset(getActivity().getAssets(), "fonts/Sansation-Light.ttf");
@@ -108,6 +123,15 @@ public class ResultsActivity extends Fragment {
                     Userdetails1 userdetails1 = dataSnapshot1.getValue(Userdetails1.class);
                     String add = userdetails1.getAdd();
                     results.setText(add);
+
+                    cal = Calendar.getInstance();
+
+                    cal.set(2018, 1, 8, 9, 59, 0);
+
+                    alarmManager = (AlarmManager) getActivity().getSystemService(Context.ALARM_SERVICE);
+                    Intent intent = new Intent(getActivity(), AlertReceiver.class);
+                    pendingIntent = PendingIntent.getBroadcast(getActivity(), 1, intent, 0);
+
                 }
             }
 
@@ -117,6 +141,41 @@ public class ResultsActivity extends Fragment {
             }
 
         });
+
+   /*     Thread thread = new Thread() {
+            @Override
+            public void run() {
+                try {
+                    while (!isInterrupted()) {
+                        Thread.sleep(1000);
+                        getActivity().runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                Date c = Calendar.getInstance().getTime();
+                                System.out.println("Current time => " + c);
+
+                                SimpleDateFormat df = new SimpleDateFormat("dd-MM-yyyy");
+                                String formattedDate = df.format(c);
+
+                                Calendar cal = Calendar.getInstance(TimeZone.getTimeZone("GMT+5:30"));
+                                Date currentLocalTime = cal.getTime();
+                                DateFormat date = new SimpleDateFormat("HH:mm:ss a");
+                                date.setTimeZone(TimeZone.getTimeZone("GMT+5:30"));
+
+                                Toast.makeText(getActivity(), formattedDate, Toast.LENGTH_LONG).show();
+                                String localTime = date.format(currentLocalTime);
+
+                                String polling = pollingDates.getText().toString();
+                                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O && formattedDate.equals(polling) &&
+                                        localTime.equals("08:00:00 PM")) {
+                                    createChannel();
+                                }
+                            }
+                        });
+                    }
+                }catch (InterruptedException e){ }
+            }
+        };   */
 
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -265,11 +324,19 @@ public class ResultsActivity extends Fragment {
             }
         });
 
+     //   thread.start();
+
+
         return view;
     }
 
     public void addListenerOnSpinnerItemSelection() {
         spinner.setOnItemSelectedListener(new CustomOnItemSelectedListener());
+    }
+
+    @TargetApi(Build.VERSION_CODES.O)
+    public void createChannel() {
+        alarmManager.setExact(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(), pendingIntent);
     }
 
 

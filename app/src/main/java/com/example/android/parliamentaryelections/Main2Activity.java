@@ -440,6 +440,16 @@ public class Main2Activity extends AppCompatActivity {
                 int year = cal.get(Calendar.YEAR);
                 int month = cal.get(Calendar.MONTH);
                 int day = cal.get(Calendar.DAY_OF_MONTH);
+                String day1 = Integer.toString(day);
+                if (day1.length() == 1) {
+                    day1 = "0" + day1;
+                }
+                day = Integer.parseInt(day1);
+                String month1 = Integer.toString(month);
+                if (month1.length() == 1) {
+                    month1 = "0" + month1;
+                }
+                month = Integer.parseInt(month1);
 
                 DatePickerDialog dialog = new DatePickerDialog(
                         Main2Activity.this,
@@ -456,7 +466,17 @@ public class Main2Activity extends AppCompatActivity {
             @Override
             public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
                 month++;
-                String date = dayOfMonth+"/"+month+"/"+year;
+
+                String day1 = Integer.toString(dayOfMonth);
+                if (day1.length() == 1) {
+                    day1 = "0" + day1;
+                }
+                String month1 = Integer.toString(month);
+                if (month1.length() == 1) {
+                    month1 = "0" + month1;
+                }
+
+                String date = day1+"-"+month1+"-"+year;
                 eemail.setText(date, TextView.BufferType.EDITABLE);
             }
         };

@@ -67,7 +67,7 @@ public class UpdatesActivity extends Fragment {
         final Typeface font = Typeface.createFromAsset(getActivity().getAssets(), "fonts/Sansation-Bold.ttf");
         tvUpdates.setTypeface(font);
 
-        
+
         recyclerView = (RecyclerView) view.findViewById(R.id.recycler_view);
 
         createNotificationChannel();
