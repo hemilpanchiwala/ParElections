@@ -139,6 +139,9 @@ public class SignUp1 extends AppCompatActivity {
         if (!validateNull(name1)) {
             name1.setError("Enter Name Properly");
         }
+        if (!validateNull(username)) {
+            username.setError("Enter username field");
+        }
         if (!validateNull(mobile) || mobile.length() != 10) {
             mobile.setError("Enter mobile No. Properly");
         }
@@ -183,6 +186,9 @@ public class SignUp1 extends AppCompatActivity {
         }
         if (!validateNull(relation)){
             relation.setError("Enter the type Of Relation");
+        }
+        if (!validateAadhar || aadhar.length() != 12){
+            aadhar.setError("Enter aadhar properly");
         }
 
         if (aadhar.length() == 12 && validateAadhar && validateNull(name1) && validateNull(mobile) &&
@@ -291,7 +297,7 @@ public class SignUp1 extends AppCompatActivity {
                             UID = currentfirebaseUser.getUid();   */
                             uploadImage(key);
 
-                            Toast.makeText(SignUp1.this, "Will be notified once verified",Toast.LENGTH_LONG).show();
+                            Toast.makeText(SignUp1.this, "Thanks for signing Up \n Will be able to login once Verified",Toast.LENGTH_LONG).show();
                             startActivity(new Intent(SignUp1.this, MainActivity.class));
 
                        //     sendEmailVerification();

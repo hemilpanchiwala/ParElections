@@ -71,6 +71,8 @@ public class ElectoralOfficer extends AppCompatActivity implements
     public void onClick(View view) {
             id = editText.getText().toString();
             int i = view.getId();
+
+            //id needed for officer's login is "963418363284"
             if(id.equals("963418363284")) {
                 if (i == R.id.btnSubmit) {
                     signIn(edtEmail.getText().toString(), edtPassword.getText().toString());

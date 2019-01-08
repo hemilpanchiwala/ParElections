@@ -95,6 +95,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    //for show password checkbox
     public void show_hide_pass(){
         checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
@@ -117,6 +118,7 @@ public class MainActivity extends AppCompatActivity {
         userLogin();
     }
 
+    //For logging in users
     private void userLogin() {
         String email1 = email.getText().toString().trim();
         String password1 = password.getText().toString().trim();
