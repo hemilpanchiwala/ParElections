@@ -10,6 +10,21 @@ Now I have added Electoral Officer button in app from which he/she can login to 
 Now comes the login page where user can login with his aadhar as password and username given by him/her at signUp while electoral officer can sign in by providing his/her password. On signing in, the Updates page will show the updates provided by  the officer and a logout options for logging out of the app. While on results page, user can see the Election Dates, can find his/her polling booth stations and whenever results are declared, he/she can see it on clicking Results option. If the election dates are declared by officer then on signing in User will be first notified that election dates have been declared and polling booth can be seen in Result & Polling Information page. On signing in, user will be welcomed to the app by a notification in phones. And on the day of elections, the notification will be sent by the firebase to all the users for going to vote with a message on importance of voting. 
 
 
+Main Page
+
+<img src="https://i.paste.pics/a3208f0d6a92aaa7dd4f2c757833efe0.png" width="220" height="464" alt="Screenshot">
+
+Electoral Officer's Main Page
+
+<img src="https://i.paste.pics/b1e02eea2f643dea7c2302e31a101b25.png" width="220" height="464" alt="Screenshot">
+
+Results & Polling Information Page
+
+<img src="https://i.paste.pics/4I6KV.png" width="220" height="464" alt="Screenshot">
+
+Updates Page
+
+<img src="https://i.paste.pics/4I6RO.png" width="220" height="464" alt="Screenshot">
 
 TO-DO List:
 
