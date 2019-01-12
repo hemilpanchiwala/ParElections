@@ -15,7 +15,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
-            android:text="Back to Sign In?"/>
+            android:text="Back to Sign In?"
+            android:textColor="#09AFED"/>
 
         <TextView
             android:id="@+id/aadhar"
@@ -26,7 +27,8 @@
             android:layout_marginTop="50dp"
             android:textAllCaps="true"
             android:layout_centerHorizontal="true"
-            android:textStyle="bold"/>
+            android:textStyle="bold"
+            android:textColor="#09AFED"/>
 
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
@@ -43,7 +45,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Enter Aadhar here"
-                android:inputType="numberDecimal" />
+                android:inputType="numberDecimal"
+                android:textColor="#09AFED"/>
 
         </android.support.design.widget.TextInputLayout>
 
@@ -56,7 +59,8 @@
             android:layout_marginTop="10dp"
             android:layout_marginLeft="30dp"
             android:textStyle="bold"
-            android:layout_below="@+id/aadhar_id"/>
+            android:layout_below="@+id/aadhar_id"
+            android:textColor="#09AFED"/>
 
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
@@ -73,7 +77,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="text"
-                android:hint="Email"/>
+                android:hint="Email"
+                android:textColor="#09AFED"
+                android:textColorHint="#09AFED"/>
 
         </android.support.design.widget.TextInputLayout>
 
@@ -85,7 +91,8 @@
             android:layout_marginLeft="30dp"
             android:layout_below="@id/username"
             android:textStyle="bold"
-            android:layout_marginTop="20dp"/>
+            android:layout_marginTop="20dp"
+            android:textColor="#09AFED"/>
 
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
@@ -102,7 +109,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Surname  Name  Father Name"
-                android:inputType="text"/>
+                android:inputType="text"
+                android:textColor="#09AFED"
+                android:textColorHint="#09AFED"/>
 
         </android.support.design.widget.TextInputLayout>
 
@@ -115,7 +124,8 @@
             android:text="Date Of Birth : "
             android:layout_alignLeft="@+id/tvaccountInfo"
             android:layout_marginTop="20dp"
-            android:textStyle="bold"/>
+            android:textStyle="bold"
+            android:textColor="#09AFED"/>
 
         <TextView
             android:id="@+id/dob"
@@ -126,7 +136,8 @@
             android:layout_marginTop="20dp"
             android:textStyle="bold"
             android:layout_marginLeft="15dp"
-            android:text="DD/MM/YYYY"/>
+            android:text="DD/MM/YYYY"
+            android:textColor="#09AFED"/>
 
         <TextView
             android:id="@+id/tvGender"
@@ -136,7 +147,8 @@
             android:layout_below="@+id/calendar"
             android:text="Gender"
             android:textSize="20sp"
-            android:layout_marginTop="20dp"/>
+            android:layout_marginTop="20dp"
+            android:textColor="#09AFED"/>
 
         <RadioGroup
             android:id="@+id/gender"
@@ -146,21 +158,24 @@
             android:layout_below="@+id/calendar"
             android:layout_marginTop="20dp"
             android:orientation="horizontal"
-            android:layout_marginRight="30dp">
+            android:layout_marginRight="30dp"
+            android:textColor="#09AFED">
 
             <RadioButton
                 android:id="@+id/genderM"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Male"
-                android:layout_marginLeft="30dp"/>
+                android:layout_marginLeft="30dp"
+                android:textColor="#09AFED"/>
 
             <RadioButton
                 android:id="@+id/genderF"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Female"
-                android:layout_marginLeft="30dp"/>
+                android:layout_marginLeft="30dp"
+                android:textColor="#09AFED"/>
         </RadioGroup>
 
         <android.support.design.widget.TextInputLayout
@@ -178,7 +193,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Mobile No."
-                android:inputType="numberDecimal"/>
+                android:inputType="numberDecimal"
+                android:textColor="#09AFED"
+                android:textColorHint="#09AFED"/>
 
         </android.support.design.widget.TextInputLayout>
 
@@ -193,7 +210,8 @@
             android:layout_marginTop="20dp"
             android:layout_marginLeft="30dp"
             android:textStyle="bold"
-            android:layout_below="@+id/mobile"/>
+            android:layout_below="@+id/mobile"
+            android:textColor="#09AFED"/>
 
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
@@ -211,7 +229,9 @@
                 android:layout_height="50dp"
                 android:inputType="text"
                 android:gravity="top"
-                android:hint="Flat no., Building name" />
+                android:hint="Flat no., Building name"
+                android:textColor="#09AFED"
+                android:textColorHint="#09AFED"/>
 
         </android.support.design.widget.TextInputLayout>
 
@@ -231,6 +251,8 @@
                 android:layout_height="50dp"
                 android:inputType="textPostalAddress"
                 android:gravity="top"
+                android:textColor="#09AFED"
+                android:textColorHint="#09AFED"
                 android:hint="Locality, area or street" />
 
         </android.support.design.widget.TextInputLayout>
@@ -251,7 +273,9 @@
                 android:layout_height="50dp"
                 android:inputType="text"
                 android:gravity="top"
-                android:hint="City" />
+                android:hint="City"
+                android:textColor="#09AFED"
+                android:textColorHint="#09AFED"/>
 
         </android.support.design.widget.TextInputLayout>
 
@@ -271,7 +295,9 @@
                 android:layout_height="50dp"
                 android:inputType="numberDecimal"
                 android:gravity="top"
-                android:hint="Pincode" />
+                android:hint="Pincode"
+                android:textColor="#09AFED"
+                android:textColorHint="#09AFED"/>
 
         </android.support.design.widget.TextInputLayout>
 
@@ -290,7 +316,9 @@
                 android:layout_height="50dp"
                 android:inputType="text"
                 android:gravity="top"
-                android:hint="State" />
+                android:hint="State"
+                android:textColor="#09AFED"
+                android:textColorHint="#09AFED"/>
 
         </android.support.design.widget.TextInputLayout>
 
@@ -309,9 +337,22 @@
                 android:layout_height="50dp"
                 android:inputType="text"
                 android:gravity="top"
-                android:hint="District" />
+                android:hint="District"
+                android:textColor="#09AFED"
+                android:textColorHint="#09AFED"/>
 
         </android.support.design.widget.TextInputLayout>
+
+
+        <CheckBox
+            android:id="@+id/check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cdistrict"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="23dp"
+            android:textColor="#09AFED"
+            android:text="       Permanent Address\n Same as Current Address" />
 
         <TextView
             android:id="@+id/tvpaddress"
@@ -321,8 +362,9 @@
             android:textSize="16sp"
             android:layout_marginTop="20dp"
             android:layout_marginLeft="30dp"
-            android:layout_below="@+id/cdistrict"
-            android:textStyle="bold"/>
+            android:layout_below="@+id/check"
+            android:textStyle="bold"
+            android:textColor="#09AFED"/>
 
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
@@ -340,7 +382,9 @@
                 android:layout_height="50dp"
                 android:inputType="text"
                 android:gravity="top"
-                android:hint="Flat no., Building name" />
+                android:hint="Flat no., Building name"
+                android:textColor="#09AFED"
+                android:textColorHint="#09AFED"/>
 
         </android.support.design.widget.TextInputLayout>
 
@@ -360,7 +404,9 @@
                 android:layout_height="50dp"
                 android:inputType="textPostalAddress"
                 android:gravity="top"
-                android:hint="Locality, area or street" />
+                android:hint="Locality, area or street"
+                android:textColor="#09AFED"
+                android:textColorHint="#09AFED"/>
 
         </android.support.design.widget.TextInputLayout>
 
@@ -380,7 +426,9 @@
                 android:layout_height="50dp"
                 android:inputType="text"
                 android:gravity="top"
-                android:hint="City" />
+                android:hint="City"
+                android:textColor="#09AFED"
+                android:textColorHint="#09AFED"/>
 
         </android.support.design.widget.TextInputLayout>
 
@@ -400,7 +448,9 @@
                 android:layout_height="50dp"
                 android:inputType="numberDecimal"
                 android:gravity="top"
-                android:hint="Pincode" />
+                android:hint="Pincode"
+                android:textColor="#09AFED"
+                android:textColorHint="#09AFED"/>
 
         </android.support.design.widget.TextInputLayout>
 
@@ -419,7 +469,9 @@
                 android:layout_height="50dp"
                 android:inputType="text"
                 android:gravity="top"
-                android:hint="State" />
+                android:hint="State"
+                android:textColor="#09AFED"
+                android:textColorHint="#09AFED"/>
 
         </android.support.design.widget.TextInputLayout>
 
@@ -438,7 +490,9 @@
                 android:layout_height="50dp"
                 android:inputType="text"
                 android:gravity="top"
-                android:hint="District" />
+                android:hint="District"
+                android:textColor="#09AFED"
+                android:textColorHint="#09AFED"/>
 
         </android.support.design.widget.TextInputLayout>
 
@@ -451,7 +505,8 @@
             android:layout_marginTop="20dp"
             android:layout_marginLeft="30dp"
             android:layout_below="@+id/pdistrict"
-            android:textStyle="bold"/>
+            android:textStyle="bold"
+            android:textColor="#09AFED"/>
 
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
@@ -468,7 +523,9 @@
                 android:layout_height="50dp"
                 android:inputType="text"
                 android:gravity="top"
-                android:hint="Name" />
+                android:hint="Name"
+                android:textColor="#09AFED"
+                android:textColorHint="#09AFED"/>
 
         </android.support.design.widget.TextInputLayout>
 
@@ -487,7 +544,9 @@
                 android:layout_height="50dp"
                 android:inputType="text"
                 android:gravity="top"
-                android:hint="Type Of Relation" />
+                android:hint="Type Of Relation"
+                android:textColor="#09AFED"
+                android:textColorHint="#09AFED"/>
 
         </android.support.design.widget.TextInputLayout>
 
@@ -499,7 +558,8 @@
             android:layout_marginTop="27dp"
             android:text="Your Photograph"
             android:textSize="22sp"
-            android:layout_below="@+id/torelation"/>
+            android:layout_below="@+id/torelation"
+            android:textColor="#09AFED"/>
 
         <Button
             style="@style/Widget.AppCompat.Button.Colored"
@@ -510,7 +570,9 @@
 
             android:layout_below="@+id/tvphoto"
             android:text="Choose Photograph"
-            android:layout_centerHorizontal="true" />
+            android:layout_centerHorizontal="true"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"/>
 
         <ImageView
             android:id="@+id/photo"
@@ -520,26 +582,48 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp" />
 
-        <Button
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/rounded_et"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_below="@+id/photo"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="30dp">
+
+            <Button
             android:id="@+id/btnSubmit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_below="@+id/photo"
-            android:layout_marginTop="40dp"
-            android:layout_marginRight="20dp"
+            style="@style/RaisedButton"
+            android:background="@drawable/rounded"
             android:text="Submit"
             android:onClick="onClick"/>
+        </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/rounded_et"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_below="@+id/photo"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="30dp">
         <Button
             android:id="@+id/btnReset"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_marginTop="40dp"
-            android:layout_marginLeft="20dp"
-            android:layout_below="@+id/photo"
-            android:text="Reset"/>
+            style="@style/RaisedButton"
+            android:background="@drawable/rounded"
+            android:text="Reset"
+            />
+        </LinearLayout>
 
     </RelativeLayout>
 

@@ -143,7 +143,7 @@ public class RecyclerviewAdapter3 extends RecyclerView.Adapter<RecyclerviewAdapt
                     storage = FirebaseStorage.getInstance();
                     storageReference = storage.getReference();
 
-                   firebaseAuth.createUserWithEmailAndPassword(username.getText().toString(), aadhar.getText().toString())
+                    firebaseAuth.createUserWithEmailAndPassword(username.getText().toString(), aadhar.getText().toString())
                             .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                                 @Override
                                 public void onComplete(@NonNull Task<AuthResult> task) {
@@ -223,10 +223,10 @@ public class RecyclerviewAdapter3 extends RecyclerView.Adapter<RecyclerviewAdapt
 
 
 
-      //      btnApprove.setTag(1, itemView);
-        //    btnRemove.setTag(2, itemView);
-       //     btnApprove.setOnClickListener(this);
-       //     btnRemove.setOnClickListener(this);
+            //      btnApprove.setTag(1, itemView);
+            //    btnRemove.setTag(2, itemView);
+            //     btnApprove.setOnClickListener(this);
+            //     btnRemove.setOnClickListener(this);
         }
 
 
@@ -241,9 +241,6 @@ public class RecyclerviewAdapter3 extends RecyclerView.Adapter<RecyclerviewAdapt
                 View tempview = (View) btnApprove.getTag(1);
                 TextView username1 = (TextView) tempview.findViewById(R.id.username);
                 TextView aadhar1 = (TextView) tempview.findViewById(R.id.aadhar);
-
-
-
                 firebaseAuth.createUserWithEmailAndPassword(username1.getText().toString(), aadhar1.getText().toString())
                         .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                             @Override
@@ -252,9 +249,5 @@ public class RecyclerviewAdapter3 extends RecyclerView.Adapter<RecyclerviewAdapt
                             }
                         });
             }  */
-        }
     }
-
-
-
-
+}

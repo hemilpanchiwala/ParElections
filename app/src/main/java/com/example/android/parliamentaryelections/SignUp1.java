@@ -17,6 +17,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -53,6 +54,7 @@ public class SignUp1 extends AppCompatActivity {
     private EditText aadhar, username, name1, mobile;
     private EditText tflat, tlocality, tcity, tpincode, tstate, tdistrict, rname, relation;
     private EditText pflat, plocality, pcity, ppincode, pstate, pdistrict;
+    private CheckBox check;
     private RadioGroup gender;
     private boolean validateAadhar;
     private String temp;
@@ -91,6 +93,21 @@ public class SignUp1 extends AppCompatActivity {
             }
         });
 
+        check.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (!isChecked) {
+
+                }else {
+                    pflat.setText(tflat.getText().toString());
+                    plocality.setText(tlocality.getText().toString());
+                    pcity.setText(tcity.getText().toString());
+                    ppincode.setText(tpincode.getText().toString());
+                    pstate.setText(tstate.getText().toString());
+                    pdistrict.setText(tdistrict.getText().toString());
+                }
+            }
+        });
 
         btnReset.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -335,6 +352,8 @@ public class SignUp1 extends AppCompatActivity {
     }
 
     private void setUpUIViews() {
+        check = (CheckBox) findViewById(R.id.check);
+        check.setTypeface(font);
         dob = (TextView) findViewById(R.id.dob);
         dob.setTypeface(font);
         tvBack = (TextView) findViewById(R.id.tvback);
