@@ -19,6 +19,7 @@ Electoral Officer's Main Page
 <img src="https://i.paste.pics/b1e02eea2f643dea7c2302e31a101b25.png" width="220" height="464" alt="Screenshot">
 
 Results & Polling Information Page
+
 <img src="https://i.paste.pics/af35cd2790e82e35beb98ac1708bff03.png" width="220" height="464" alt="Screenshot">
 
 Updates Page
