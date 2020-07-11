@@ -26,7 +26,4 @@ Updates Page
 
 <img src="https://i.paste.pics/4I6RO.png" width="220" height="464" alt="Screenshot">
 
-TO-DO List:
-
-    • Have added a thread in my Updates fragment for setting notification automatically on day of elections but app is crashing when I logout so will fix that problem and so now I am using firebase cloud messaging to send message to all users.
 
